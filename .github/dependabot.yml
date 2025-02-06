@@ -4,6 +4,7 @@
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
+updates:
   # Enable version updates for C#
   - package-ecosystem: "dotnet-sdk"
     # Look for `package.json` and `lock` files in the `root` directory
@@ -11,6 +12,7 @@ version: 2
     # Check for updates every day (weekdays)
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 10
 
   # Enable version updates for python
   - package-ecosystem: "pip"
@@ -19,6 +21,7 @@ version: 2
     # Check for updates every day (weekdays)
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 10
 
   # Enable version updates for Docker
   - package-ecosystem: "docker"
@@ -27,6 +30,7 @@ version: 2
     # Check for updates once a week
     schedule:
       interval: "weekly"  # Enable version updates for npm
+    open-pull-requests-limit: 10
 
   # Enable version updates for gradle build system
   - package-ecosystem: "gradle"
@@ -35,3 +39,4 @@ version: 2
     # Check the updates every day (weekdays)
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 10
